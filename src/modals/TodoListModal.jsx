@@ -1,21 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TodoListModal.css';
 
 const TodoListModal = ({ onClose }) => {
-  const [todos, setTodos] = useState([
-    'Plan our 3-year anniversary trip',
-    'Go to that new restaurant we talked about',
-    'Visit the botanical gardens 🌳',
-  ]);
-  const [newTodo, setNewTodo] = useState('');
+  const [plans, setPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const handleAddTodo = (e) => {
+  useEffect(() => {
+    // Fetch the data from the JSON file when the component loads
+    fetch('/future-plans.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch future plans.');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setPlans(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []); // The empty dependency array ensures this runs only once
+
+  const handleAddPlan = (e) => {
     e.preventDefault();
-    if (newTodo.trim()) {
-      setTodos([...todos, newTodo.trim()]);
-      setNewTodo('');
+    if (newPlan.trim()) {
+      // Create a new item with a unique ID
+      const newItem = {
+        id: Date.now(), // A simple way to generate a unique ID
+        plan: newPlan.trim()
+      };
+      setPlans([...plans, newItem]);
+      setNewPlan('');
     }
   };
+
+  if (loading) {
+    return (
+      <div className="modal-overlay">
+        <div className="modal-content">
+          <p>Loading plans...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="modal-overlay">
+        <div className="modal-content">
+          <p>Error: {error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="modal-overlay">
@@ -23,19 +64,10 @@ const TodoListModal = ({ onClose }) => {
         <h2>Our Future Plans</h2>
         <button className="close-button" onClick={onClose}>&times;</button>
         <ul>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
+          {plans.map(item => (
+            <li key={item.id}>{item.plan}</li>
           ))}
         </ul>
-        <form onSubmit={handleAddTodo}>
-          <input
-            type="text"
-            value={newTodo}
-            onChange={(e) => setNewTodo(e.target.value)}
-            placeholder="Add a new plan"
-          />
-          <button type="submit">Add</button>
-        </form>
       </div>
     </div>
   );
