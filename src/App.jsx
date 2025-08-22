@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import MapMover from "./MapMover";
 import FloatingButton from "./FloatingButton";
 import TodoListModal from "./modals/TodoListModal";
 import AnniversaryModal from "./modals/AnniversaryModal";
-import data from '../public/map-data.json'
+import OracleModal from "./modals/OracleModal";
+import data from "../public/map-data.json";
 
 function App() {
   const [showTodoListModal, setShowTodoListModal] = useState(false);
   const [showAnniversaryModal, setShowAnniversaryModal] = useState(false);
+  const [showOracleModal, setShowOracleModal] = useState(false);
+  const [targetCoords, setTargetCoords] = useState(null);
 
   const position = [51.48684202000723, -3.183058895639874];
+
+  const handleLocationClick = (coords) => {
+    setTargetCoords(coords);
+  };
+
   return (
     <div className="map-container">
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer
+        center={position}
+        zoom={13}
+        scrollWheelZoom={false}
+      >
+        <MapMover coords={targetCoords} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -55,12 +69,26 @@ function App() {
         Our Story ✨
       </FloatingButton>
 
+      {/* Button for the oracle modal */}
+      <FloatingButton
+        position="top-right"
+        onClick={() => setShowOracleModal(true)}
+      >
+        Quick View 🔎
+      </FloatingButton>
+
       {/* Conditionally render the modals */}
       {showTodoListModal && (
         <TodoListModal onClose={() => setShowTodoListModal(false)} />
       )}
       {showAnniversaryModal && (
         <AnniversaryModal onClose={() => setShowAnniversaryModal(false)} />
+      )}
+      {showOracleModal && (
+        <OracleModal
+          onClose={() => setShowOracleModal(false)}
+          onLocationClick={handleLocationClick}
+        />
       )}
     </div>
   );

@@ -5,6 +5,7 @@
     "date": "20th July, 2023",
     "description": "This is where we played minigolf! I definitely won :)",
     "coordinates": [51.479002265192214, -3.175454076575537],
+    "location": "Treetop Golf Cardiff",
     "images": ["/images/first-date.jpg"]
   },
   {
@@ -13,6 +14,7 @@
     "date": "20th July, 2023",
     "description": "This is the spot where we had our first kiss. This is also where you got a parking ticket.",
     "coordinates": [51.48684202000723, -3.183058895639874],
+    "location": "1 College Rd, Cardiff CF10 3NB",
     "images": ["/images/first-kiss.jpg"]
   },
   {
@@ -21,6 +23,7 @@
     "date": "15th April, 2024",
     "description": "This is the hotel we stayed on our first holiday together!",
     "coordinates": [28.053646087646484, -16.70598793029785],
+    "location": "Paradise Park Fun Lifestyle Hotel",
     "images": ["/images/first-holiday.jpg"]
   },
   {
@@ -29,6 +32,7 @@
     "date": "31st March, 2025",
     "description": "This is the hotel we stayed on our second holiday together!",
     "coordinates": [30.40322792077922, -9.599826589335514],
+    "location": "Amadil Ocean Club",
     "images": ["/images/second-holiday.jpg"]
   },
   {
@@ -37,6 +41,7 @@
     "date": "19th August, 2025",
     "description": "I don't like thinking about this much",
     "coordinates": [51.161070419508036, -0.17692433580625],
+    "location": "London Gatwick Airport North Terminal",
     "images": []
   },
   {
@@ -45,6 +50,7 @@
     "date": "25th August, 2024",
     "description": "This place was really nice, shame I dropped garlic butter on my trousers",
     "coordinates": [54.97097396850586, -1.5981930494308472],
+    "location": "Victors Newcastle",
     "images": ["/images/first-anniversary.jpg"]
   },
   {
@@ -53,6 +59,7 @@
     "date": "27th August, 2023",
     "description": "Can't believe we had to leave imagine dragons early to watch Billie. (Shame I like her now lol)",
     "coordinates": [51.46352105295748, -0.9899128887912645],
+    "location": "Reading Festival",
     "images": ["/images/reading-festival.jpg"]
   },
   {
@@ -61,6 +68,7 @@
     "date": "18th June, 2025",
     "description": "I think this was a pretty good birthday present, going to be tough for me to top this.",
     "coordinates": [48.873150210583646, 2.776099434246837],
+    "location": "Disneyland Paris",
     "images": ["/images/disneyland-paris1.jpg", "/images/disneyland-paris2.jpg"]
   },
   {
@@ -69,14 +77,16 @@
     "date": "1st November, 2023",
     "description": "This was a weird night, thank you Claire for the last minute tickets. Shame about the oversized suit",
     "coordinates": [52.768963999445866, -1.2280976291028334],
+    "location": "Loughborough Students Union",
     "images": ["/images/loughborough-ball.jpg"]
   },
   {
     "id": 10,
     "title": "The day I asked you offically.",
-    "date": "1st November, 2023",
+    "date": "25th August, 2023",
     "description": "This was a weird night, meet your parents in that cheese bar, hit my head, went clubbing. But most importantly I asked you to be my girlfriend",
     "coordinates": [52.207312, 0.124201],
+    "location": "d'Arry's Restaurant, Bar & Cheesemonger",
     "images": []
   },
   {
@@ -85,6 +95,7 @@
     "date": "16th August, 2023",
     "description": "Brief encounter with your mum, hopefully I gave a good impression",
     "coordinates": [51.44927468540165, -2.5817672483459586],
+    "location": "Bristol Temple Meads Station",
     "images": []
   },
   {
@@ -93,6 +104,7 @@
     "date": "16th August, 2023",
     "description": "This was a very hilly park, glad we got to the top of the tower though!",
     "coordinates": [51.453985651563585, -2.606679499799114],
+    "location": "Cabot Tower",
     "images": ["/images/bristol-park.jpg"]
   },
   {
@@ -101,6 +113,7 @@
     "date": "19th November, 2023",
     "description": "I don't wanna know how much we've spent here",
     "coordinates": [52.77242172186096, -1.2041106895861509],
+    "location": "Pizza Express",
     "images": ["/images/pizza-express.jpg"]
   }
 ]

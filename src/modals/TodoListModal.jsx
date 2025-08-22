@@ -25,19 +25,6 @@ const TodoListModal = ({ onClose }) => {
       });
   }, []); // The empty dependency array ensures this runs only once
 
-  const handleAddPlan = (e) => {
-    e.preventDefault();
-    if (newPlan.trim()) {
-      // Create a new item with a unique ID
-      const newItem = {
-        id: Date.now(), // A simple way to generate a unique ID
-        plan: newPlan.trim()
-      };
-      setPlans([...plans, newItem]);
-      setNewPlan('');
-    }
-  };
-
   if (loading) {
     return (
       <div className="modal-overlay">
