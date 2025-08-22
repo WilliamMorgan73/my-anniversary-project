@@ -16,7 +16,7 @@ const AnniversaryModal = ({ onClose }) => {
           Here's to a lifetime more of exploring and creating beautiful memories
           together. I love you more than words can say.
         </p>
-        {/* You could add a photo gallery here */}
+        {/* Add stats here */}
       </div>
     </div>
   );
