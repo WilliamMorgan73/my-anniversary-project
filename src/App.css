@@ -1,0 +1,21 @@
+/* Ensure the body and html tags take up the full viewport height */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* This is the key part. Give the parent container a height and width. */
+.map-container {
+  height: 100vh; /* This means 100% of the viewport height */
+  width: 100vw; /* This means 100% of the viewport width */
+}
+
+/* This styles the element created by react-leaflet */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
