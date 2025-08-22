@@ -4,9 +4,12 @@ import './App.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import FloatingButton from './FloatingButton';
 import TodoListModal from './modals/TodoListModal';
+import AnniversaryModal from './modals/AnniversaryModal';
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
+  const [showTodoListModal, setShowTodoListModal] = useState(false);
+  const [showAnniversaryModal, setShowAnniversaryModal] = useState(false); 
+  
   const position = [51.48684202000723,-3.183058895639874];
   return (
     <div className="map-container">
@@ -153,11 +156,19 @@ function App() {
         </Marker>
       </MapContainer>
 
-      {/* Render the floating button */}
-      <FloatingButton onClick={() => setShowModal(true)} />
+      {/* Button for the To-Do List Modal */}
+      <FloatingButton onClick={() => setShowTodoListModal(true)}>
+        Future Plans 🚀
+      </FloatingButton>
 
-      {/* Conditionally render the modal based on state */}
-      {showModal && <TodoListModal onClose={() => setShowModal(false)} />}
+      {/* Button for the Anniversary Modal */}
+      <FloatingButton position="bottom-left" onClick={() => setShowAnniversaryModal(true)}>
+        Our Story ✨
+      </FloatingButton>
+
+      {/* Conditionally render the modals */}
+      {showTodoListModal && <TodoListModal onClose={() => setShowTodoListModal(false)} />}
+      {showAnniversaryModal && <AnniversaryModal onClose={() => setShowAnniversaryModal(false)} />}
 
 
       {/*pizza expresseses weve been to lol*/}

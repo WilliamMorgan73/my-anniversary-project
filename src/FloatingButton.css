@@ -1,7 +1,5 @@
 .floating-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -16,4 +14,24 @@
 
 .floating-button:hover {
   transform: translateY(-2px);
+}
+
+.floating-button.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.floating-button.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.floating-button.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.floating-button.top-left {
+  top: 20px;
+  left: 20px;
 }
