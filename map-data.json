@@ -6,7 +6,7 @@
     "description": "This is where we played minigolf! I definitely won :)",
     "coordinates": [51.479002265192214, -3.175454076575537],
     "location": "Treetop Golf Cardiff",
-    "images": ["/images/first-date.jpg"]
+  "images": ["images/first-date.jpg"]
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "This is the spot where we had our first kiss. This is also where you got a parking ticket.",
     "coordinates": [51.48684202000723, -3.183058895639874],
     "location": "1 College Rd, Cardiff CF10 3NB",
-    "images": ["/images/first-kiss.jpg"]
+  "images": ["images/first-kiss.jpg"]
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "This is the hotel we stayed on our first holiday together!",
     "coordinates": [28.053646087646484, -16.70598793029785],
     "location": "Paradise Park Fun Lifestyle Hotel",
-    "images": ["/images/first-holiday.jpg"]
+  "images": ["images/first-holiday.jpg"]
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "This is the hotel we stayed on our second holiday together!",
     "coordinates": [30.40322792077922, -9.599826589335514],
     "location": "Amadil Ocean Club",
-    "images": ["/images/second-holiday.jpg"]
+  "images": ["images/second-holiday.jpg"]
   },
   {
     "id": 5,
