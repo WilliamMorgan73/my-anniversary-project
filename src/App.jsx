@@ -40,16 +40,19 @@ function App() {
                 <h3>{item.title}</h3>
                 <p>{item.date}</p>
                 <p>{item.description}</p>
-                {/* Dynamically render images if they exist */}
-                {item.images &&
-                  item.images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={item.title}
-                      style={{ maxWidth: "100%", height: "auto" }}
-                    />
-                  ))}
+                {/* Images*/}
+                {item.images && (
+                  <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center" }}>
+                    {item.images.map((image, index) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt={item.title}
+                        style={{ maxWidth: "100px", height: "auto" }}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </Popup>
           </Marker>
